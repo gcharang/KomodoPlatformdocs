@@ -2,7 +2,7 @@
 Installing Komodo Manually
 **************************
 
-For OSx instructions: :ref:`Installing Komodo on OSx`
+For OSx instructions: :ref:`Installing Komodo on OSX`
 
 For windows instructions: :ref:`Installing Komodo on Windows 64-bit systems`
 
@@ -159,7 +159,44 @@ in this output when you see ``"blocks"`` and ``"longestchain"`` values showing s
 Updating Komodo installation to the latest version
 --------------------------------------------------
 
-If you had already installed Komodo from it's source code on your machine, and need to update to latest version just do these commands
+If you already have installed Komodo from it's source code on your machine, and need to update to the latest version, follow the below steps.
+
+Please follow each step carefully and don't skip to the next one until the previous step is successfully completed. If you have the ``komodo daemon`` running, you can leave it running while updating if you have enough resources in your machine. If you prefer to stop it before updating, please use ``~/komodo/src/komodo-cli stop`` to stop the daemon and proceed with the following steps to update.
+
+
+1. Navigate to your komodo directory 
+
+.. code-block:: shell
+
+	cd ~/komodo
+
+2. Make sure you don't have any changes made to the source and reset it. This will ensure clean source and shouldn't create issues while pulling the latest source in the next step.
+
+.. code-block:: shell
+
+	git reset --hard
+
+3. Clean the source directory
+
+.. code-block:: shell
+
+	make clean
+
+4. Update the source. (If you have any changes made to the source code, this command may not pull the latest source. Please make sure you have followed the previous steps)
+
+.. code-block:: shell
+
+	git pull
+
+5. Compile the latest binary
+
+.. code-block:: shell
+
+	./zcutil/build.sh -j$(nproc)
+
+Start your sevices as usual. If you didn't stop the deamon before compiling, please stop it using ``~/komodo/src/komodo-cli stop`` and start again.
+
+If you are in a hurry, most of the time the below steps can be used to update the daemon and it takes lesser amount of time to compile. But it is a good practice to follow the steps outlined above to make sure the compilation process completes without an error.
 
 .. code-block:: shell
 
@@ -168,16 +205,9 @@ If you had already installed Komodo from it's source code on your machine, and n
 	git pull
 	make -j$(nproc)
 
-if you get any error executing make command, then do these commands:
+.. note:::
 
-.. code-block:: shell
-
-	cd ~/komodo/
-	git checkout dev
-	git pull
-	./zcutil/build.sh -j$(nproc)
-
-``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work every time for you, butin case it doesn't just use the ``build.sh`` method.
+	``build.sh`` method will take longer as compared to ``make`` command. ``make`` command should work most of the time. But in case it doesn't, just use the ``build.sh`` method.
 
 IMPORTANT: Backup your wallet
 -----------------------------
@@ -208,7 +238,7 @@ To backup you can take a copy of this file and make archive of it.
 	# To make archive
 	tar -czvf ~/wallet_backup_21May2017.dat.tgz ~/wallet_backup_21May2017.dat
 
-Installing Komodo on OSx
+Installing Komodo on OSX
 ========================
 
 Requirements
@@ -227,7 +257,7 @@ Now install the dependency packages:
 
 	brew tap discoteq/discoteq; brew install flock
 	brew install autoconf autogen automake
-	brew install gcc5
+	brew install gcc6
 	brew install binutils
 	brew install protobuf
 	brew install coreutils
@@ -236,14 +266,14 @@ Now install the dependency packages:
 
 or
 
-``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc5 binutils protobuf coreutils wget nanomsg```
+``brew tap discoteq/discoteq; brew install flock autoconf autogen automake gcc6 binutils protobuf coreutils wget nanomsg```
 
 Clone the Komodo repository
 ---------------------------
 
 .. code-block:: shell
 
-	git clone https://github.com/KomodoPlatform/komodo
+	git clone https://github.com/jl777/komodo
 
 Get the proving keys:
 ---------------------
@@ -315,7 +345,7 @@ Installing Komodo on Windows 64-bit systems
 
 PLEASE FOLLOW THE VIDEO TUTORIAL: https://youtu.be/gfZZy8b222E
 
-1. First download komodo windows `binaries <https://artifacts.supernet.org/latest/windows/>`_ and place the files in a new folder on the Desktop called kmd ('``C:\Users\YourUserName\Desktop\kmd``') .
+1. First download komodo windows `binaries <https://artifacts.supernet.org/latest/komodo/windows/>`_ and place the files in a new folder on the Desktop called kmd ('``C:\Users\YourUserName\Desktop\kmd``') .
 
 Open a Command Prompt for the following steps.
 

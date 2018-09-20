@@ -8,21 +8,23 @@ Komodo Platform (barterDEX) is capable of working with Electrum servers. This me
 
 If you however choose to use a native coin daemon, please make sure it is fully synced. For Komodo and other assetchains use the `latest Agama installer`_ or use the `KomodoOcean-QT`_.
 
-For a list of currently supported native coins and instructions for the coin specific configuration file, see `Supported Native Coins`_
+For a list of currently supported native coins and instructions for the coin specific configuration file, see `Supported Native Coins <index-coin-configs-install-instructions>`_
 
 You may want to back up your system or clone it after everything is synced and running correctly BEFORE you start installing coin daemons.
 
-.. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX
+.. _BarterDEX GUI : https://github.com/KomodoPlatform/BarterDEX/releases
 .. _link for the binaries. : https://github.com/KomodoPlatform/BarterDEX/tree/dev/assets/bin/win64
-.. _latest Agama installer : https://artifacts.supernet.org/latest/
+.. _latest Agama installer : https://komodoplatform.com/komodo-wallets
 .. _KomodoOcean-QT : https://github.com/DeckerSU/komodo-qt/releases
-.. _Supported Native Coins : https://support.supernet.org/support/solutions/articles/29000014808-installation-script-for-various-coins
 
 Installing Komodo Platform (barterDEX)
 ======================================
 
 Install the following dependency packages:
 ------------------------------------------
+
+Linux:
+^^^^^^
 
 .. code-block:: shell
 

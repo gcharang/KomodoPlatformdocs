@@ -14,6 +14,7 @@ Here you will find more information about Komodo (KMD)
    komodo/komodo-API.rst
    komodo/security-setup-Komodo-Node
    komodo/useful-KMD-BTC-commands
+   komodo/beginner-vps-linux-assetchain
    komodo/create-Komodo-Assetchain
    komodo/assetchain-params
    komodo/example-asset-chains.rst
@@ -27,6 +28,7 @@ Here you will find more information about Komodo (KMD)
    notarynode/setup-Komodo-Notary-Node
    notarynode/updating-Komodo-Notary-Node
    notarynode/update-Komodo-manually
+   notarynode/split-utxo-for-notarization
    notarynode/monitor-your-Komodo-Notary-Node
    notarynode/assetchains-guide-Komodo-Notary-Node
    notarynode/useful-commands-Komodo-Notary-Node

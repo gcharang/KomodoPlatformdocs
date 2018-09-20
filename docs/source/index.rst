@@ -29,8 +29,9 @@ Welcome to Komodo Platform's documentation!
 Whitepaper
 ----------
 
-   :download:`Whitepaper </whitepaper/Komodo-Whitepaper-June-3.pdf>`
-   
+	* :download:`Whitepaper(pdf) </whitepaper/Komodo-Whitepaper-June-3.pdf>`
+	* html version: :doc:`home-whitepaper`
+
 .. _quicklinks:
 
 .. toctree::
@@ -39,9 +40,12 @@ Whitepaper
    
    general/list-all-KomodoPlatform-Project-links
    whats-new
+   home-whitepaper
    general-documentation
    home-komodo
    home-agama
+   home-cc
+   cc/index-book-jl
    home-barterDEX
    home-hyperDEX
    Setup Bob/Marketmaker nodes using easy scripts by @blackjok3r <https://github.com/blackjok3rtt/BOB_scripts>
@@ -94,6 +98,7 @@ Whitepaper
    notarynode/setup-Komodo-Notary-Node
    notarynode/updating-Komodo-Notary-Node
    notarynode/update-Komodo-manually
+   notarynode/split-utxo-for-notarization
    notarynode/assetchains-guide-Komodo-Notary-Node
    notarynode/useful-commands-Komodo-Notary-Node
    
@@ -105,4 +110,3 @@ Whitepaper
 
    testing/test-komodo-source-jl777-branch
    testing/debug-Komodo
-
