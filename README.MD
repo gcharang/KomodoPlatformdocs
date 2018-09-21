@@ -2,7 +2,7 @@
 
 # README!
 
-Documentation for https://docs.komodoplatform.com/
+The Official repository is : https://github.com/KomodoPlatform/Documentation Please submit your commits there
 -----
 
 This documentation is being written using the reStructuredText(reST, .rst) format. To be hosted at https://docs.komodoplatform.com with the theme sphinx_rtd.
